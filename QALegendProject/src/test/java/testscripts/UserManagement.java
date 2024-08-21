@@ -1,13 +1,9 @@
 package testscripts;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 import java.util.List;
 
 import org.automationcore.BaseClass;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -17,47 +13,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
-import dataprovider.DataProviders;
 import pageObject.HomePage;
-import pageObject.LoginPage;
 import utilities.ExcelUtility;
 import utilities.RandomDataUtility;
 
-public class LoginPageTest extends BaseClass{
+public class UserManagement extends BaseClass{
+	
 	@Test
-	public void verifyLoginWithValidCredentials()
+	
+	public void verifyUserCreation()
 	{
-		String user_name = ExcelUtility.getExcelStringData(1, 0, "LoginPage");
-		String pasword = ExcelUtility.getExcelIntegerData(1, 1, "LoginPage");
-		String expectedwelcomemessage = ExcelUtility.getExcelStringData(1, 3, "LoginPage");
-		LoginPage login = new LoginPage(driver);
-		login.enterUserName(user_name);
-		login.enterPassword(pasword);
-		HomePage home = login.clickOnLoginButton();
-		home.clickEndTourButton();
-		String actualtext = home.getLoginText();
-		Assert.assertEquals(actualtext, expectedwelcomemessage , "Invalid Login");
-		
-		/*WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
-		username.sendKeys(user_name);
-		
-		
-		WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
-		password.sendKeys(pasword);
-		
-		WebElement login = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
-		login.click();
-		WebElement endtourbutton = driver.findElement(By.xpath("//button[@class='btn btn-default btn-sm']"));
-		endtourbutton.click();
-		WebElement welcomemessage = driver.findElement(By.xpath("//section[@class='content-header']"));
-		String actualwelcomemessage = welcomemessage.getText();
-		
-		Assert.assertEquals(actualwelcomemessage, expectedwelcomemessage, "Succesful Login");*/
-		
-		//--------------------------------
-		
-	//*************add user page **********************
 		WebElement usermanagementdropdown = driver.findElement(By.xpath("//span[@class='pull-right-container']"));
 		usermanagementdropdown.click();
 		
@@ -112,7 +77,7 @@ public class LoginPageTest extends BaseClass{
 	
 	WebElement SearchButton = driver.findElement(By.xpath("//input[@class='form-control input-sm']"));
 	SearchButton.sendKeys(username);
-	
+	//WebElement usernameintable = driver.findElement(By.xpath("//table[@id='users_table']/tbody/tr[1]/td[1]"));
 	WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 	WebElement usernameintable= wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='users_table']/tbody/tr[1]/td[1]")));
 	String usernametologin = usernameintable.getText();
@@ -145,23 +110,4 @@ public class LoginPageTest extends BaseClass{
 	
 	}
 	
-	//****************add user page*********************************
-	
-	
-@Test(dataProvider = "InvalidUserCredentials", dataProviderClass = DataProviders.class)
-	public void verifyErrorMessageWhileLoginWithInvalidCredentials(String username , String userpassword)
-	{
-	WebElement user_name = driver.findElement(By.xpath("//input[@id='username']"));
-	user_name.sendKeys(username);
-	WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
-	password.sendKeys(userpassword);
-	WebElement login = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
-	login.click();
-	WebElement actualerror = driver.findElement(By.xpath("//span[@class='help-block']"));
-	String actualerrormessage = actualerror.getText();
-	String expectederrormessage = ExcelUtility.getExcelStringData(1, 2, "LoginPage");
-	AssertJUnit.assertEquals(actualerrormessage, expectederrormessage, "Not Expected Prompt");
-		
-	}
-
 }

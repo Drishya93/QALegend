@@ -48,7 +48,7 @@ public class BaseClass {
 		{
 			takeScreenShots(results);
 		}
-		driver.close();
+		//driver.close();
 	}
 	
 	public void takeScreenShots(ITestResult results) throws IOException
