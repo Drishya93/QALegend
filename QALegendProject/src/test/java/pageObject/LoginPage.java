@@ -30,6 +30,7 @@ public class LoginPage
 	WebElement errormessagewhenloginusinginvalidcredentials;
 	
 	
+	
 	public void enterUserName(String username)
 	{
 		usernamefield.sendKeys(username);
@@ -43,7 +44,21 @@ public class LoginPage
 		loginbutton.click();
 		return new HomePage(driver);
 	}
+	
+	public String errorMessageWithInvalidLogin()
+	{
+		return errormessagewhenloginusinginvalidcredentials.getText();
+	}
+	
+	public ForgotPasswordPage forgotPasswordButton()
+	{
+		Forgotpasswordbutton.click();
+		return new ForgotPasswordPage(driver);
+	}
+	
+	
 }
+
 		
 	
 

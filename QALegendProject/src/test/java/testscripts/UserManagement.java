@@ -13,7 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObject.AddUserPage;
 import pageObject.HomePage;
+import pageObject.LoginPage;
+import pageObject.UserPage;
 import utilities.ExcelUtility;
 import utilities.RandomDataUtility;
 
@@ -23,7 +26,53 @@ public class UserManagement extends BaseClass{
 	
 	public void verifyUserCreation()
 	{
-		WebElement usermanagementdropdown = driver.findElement(By.xpath("//span[@class='pull-right-container']"));
+		
+		String prefix = ExcelUtility.getExcelStringData(1, 0, "UserManagementPage");
+		String expectedRole = ExcelUtility.getExcelStringData(1, 1, "UserManagementPage");
+		String commission = ExcelUtility.getExcelIntegerData(1, 2, "UserManagementPage") ;
+		String firstname = RandomDataUtility.getFirstName();
+		String lastname = RandomDataUtility.getLastName();
+		String email = firstname + "." + lastname + "@yahoo.com";
+		String username = firstname + "@1";
+		String password1 = firstname + "." + lastname;
+		String confirmpassword = password1;
+		String expectedwelcomemessagefield = "Welcome" + " " + firstname + ",";
+		
+		UserPage user = new UserPage(driver);
+		user.verifyUserManagementDropDown();
+		user.verifyUserDropDown();
+		AddUserPage adduser = user.verifyAddUser();
+		adduser.verifyPrefixField(prefix);
+		adduser.verifyFirstNameField(firstname);
+		adduser.verifyLastNameField(lastname);
+		adduser.verifyEmailField(email);
+		adduser.verifyRolesDropDown(expectedRole);
+		adduser.verifyUserNmaeField(username);
+		adduser.verifyPasswordField(password1);
+		adduser.verifyConfirmPasswordField(confirmpassword);
+		adduser.verifyCommisionField(commission);
+		adduser.verifySaveButton(); //check how navigation to userpage to be done here
+		user.verifySearchField(username);
+		user.verifySearchResults();
+		HomePage home = user.clickHomeIcon();
+		home.clickAdminButton();
+		home.clickSignoutButton();
+		LoginPage login = new LoginPage(driver);
+		login.enterUserName(username);
+		login.enterPassword(password1);
+		login.clickOnLoginButton();
+		String actualwelcomemessage = home.verifyWelcomeMessageAfterUserCreationAndLogin();
+		Assert.assertEquals(actualwelcomemessage, expectedwelcomemessagefield , "Unexpected Login");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*WebElement usermanagementdropdown = driver.findElement(By.xpath("//span[@class='pull-right-container']"));
 		usermanagementdropdown.click();
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Updated syntax
@@ -77,7 +126,6 @@ public class UserManagement extends BaseClass{
 	
 	WebElement SearchButton = driver.findElement(By.xpath("//input[@class='form-control input-sm']"));
 	SearchButton.sendKeys(username);
-	//WebElement usernameintable = driver.findElement(By.xpath("//table[@id='users_table']/tbody/tr[1]/td[1]"));
 	WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 	WebElement usernameintable= wait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@id='users_table']/tbody/tr[1]/td[1]")));
 	String usernametologin = usernameintable.getText();
@@ -106,7 +154,7 @@ public class UserManagement extends BaseClass{
 	
 	String expectedwelcomemessagefield = "Welcome" + " " + firstname + ",";
 	
-	Assert.assertEquals(actualwelcometag, expectedwelcomemessagefield, "Login Failed");
+	Assert.assertEquals(actualwelcometag, expectedwelcomemessagefield, "Login Failed");*/
 	
 	}
 	

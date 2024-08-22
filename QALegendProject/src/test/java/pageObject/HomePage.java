@@ -21,6 +21,12 @@ public class HomePage {
 	WebElement loginname;
 	@FindBy(xpath="//button[@class='btn btn-default btn-sm']")
 	WebElement endtourbutton;
+	@FindBy(xpath="//span[text()='Admin ']")
+	WebElement adminbutton;
+	@FindBy(xpath="//a[text()='Sign Out']")
+	WebElement signoutbutton;
+	@FindBy(xpath="//section[@class='content-header']")
+	WebElement actualwelcomemessagefieldafterloginwithcreateduser;
 	
 	public String getLoginText()
 	{
@@ -34,7 +40,21 @@ public class HomePage {
 	{
 		endtourbutton.click();
 	}
+	public void clickAdminButton()
+	{
+		adminbutton.click();
+	}
 	
+	public LoginPage clickSignoutButton()
+	{
+		signoutbutton.click();
+		return new LoginPage(driver);
+	}
+	public String verifyWelcomeMessageAfterUserCreationAndLogin()
+	{
+		String actualmessage = actualwelcomemessagefieldafterloginwithcreateduser.getText();
+		return actualmessage;
+	}
 	
 
 }
