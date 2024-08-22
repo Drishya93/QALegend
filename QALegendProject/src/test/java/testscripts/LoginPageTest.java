@@ -54,6 +54,7 @@ public class LoginPageTest extends BaseClass{
 		String password1 = firstname + "." + lastname;
 		String confirmpassword = password1;
 		String expectedwelcomemessagefield = "Welcome" + " " + firstname + ",";
+		String expectedusername = username;
 		
 		UserPage user = new UserPage(driver);
 		user.verifyUserManagementDropDown();
@@ -70,7 +71,9 @@ public class LoginPageTest extends BaseClass{
 		adduser.verifyCommisionField(commission);
 		adduser.verifySaveButton(); //check how navigation to userpage to be done here
 		user.verifySearchField(username);
-		user.verifySearchResults();
+		//user.verifySearchResults();
+		String actualusername = user.verifySearchResults();
+		Assert.assertEquals(actualusername, expectedusername,"Unexpected Username");
 		 user.clickHomeIcon();
 		//HomePage home = new HomePage(driver);
 		home.clickAdminButton();
@@ -83,7 +86,7 @@ public class LoginPageTest extends BaseClass{
 		Assert.assertEquals(actualwelcomemessage, expectedwelcomemessagefield , "Unexpected Login");
 	}
 		
-		
+	
 		
 	
 	//****************add user page*********************************
