@@ -9,16 +9,20 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import constants.Constants;
+
 public class ExcelUtility {
 	static FileInputStream file;
 	 static XSSFWorkbook wbook;
 	 static XSSFSheet sheet;
+	 
 	
 	public static String getExcelStringData(int rows , int cells , String sheets) 
 	{
 		try
 		{
-		 file = new FileInputStream("C:\\Users\\Dell\\git\\QALegend\\QALegendProject\\src\\test\\resources\\TestData.xlsx");
+			String path=Constants.HOME_DIRECTORY + Constants.TESTDATA_EXCELPATH;
+		 file = new FileInputStream(path);
 		 wbook = new XSSFWorkbook(file);
 		 sheet = wbook.getSheet(sheets);
 		 XSSFRow row = sheet.getRow(rows);
@@ -36,7 +40,9 @@ public class ExcelUtility {
 	{
 		try
 		{
-		file = new FileInputStream("C:\\Users\\Dell\\git\\QALegend\\QALegendProject\\src\\test\\resources\\TestData.xlsx");
+			String path=Constants.HOME_DIRECTORY + Constants.TESTDATA_EXCELPATH;
+			 file = new FileInputStream(path);
+		
 		wbook = new XSSFWorkbook(file);
 		sheet = wbook.getSheet(sheets);
 		XSSFRow row = sheet.getRow(rows);

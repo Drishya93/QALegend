@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
+import constants.Messages;
 import pageObject.ForgotPasswordPage;
 import pageObject.LoginPage;
 import utilities.ExcelUtility;
@@ -14,8 +16,8 @@ public class PasswordResetPageTest extends BaseClass{
 	@Test
 	public void verifyPasswordResetWithValidEmail()
 	{
-		String emailaddress = ExcelUtility.getExcelStringData(1, 0, "PasswordResetPage");
-		String expectederrormessage = ExcelUtility.getExcelStringData(1, 3, "PasswordResetPage");
+		String emailaddress = ExcelUtility.getExcelStringData(1, 0, Constants.FORGOTPASSWORD_PAGE);
+		String expectederrormessage = ExcelUtility.getExcelStringData(1, 3, Constants.FORGOTPASSWORD_PAGE);
 		
 		LoginPage login = new LoginPage(driver);
 		ForgotPasswordPage forgotpassword = login.forgotPasswordButton();
@@ -23,7 +25,7 @@ public class PasswordResetPageTest extends BaseClass{
 		forgotpassword.verifySendPasswordResetLinkButton();
 		forgotpassword.verifyPromptMessageForPasswordReset();
 		String actualmessage = forgotpassword.verifyPromptMessageForPasswordReset();
-		Assert.assertEquals(actualmessage, expectederrormessage, "Password Reset Failed");
+		Assert.assertEquals(actualmessage, expectederrormessage, Messages.MESSAGE_PASSWORDRESTFAILED);
 		
 	}
 		
@@ -31,8 +33,8 @@ public class PasswordResetPageTest extends BaseClass{
 	
 	public void verifyPasswordResetWithInvalidEmail()
 	{
-		String expectederrormessage = ExcelUtility.getExcelStringData(1, 2, "PasswordResetPage");
-		String emailaddress = ExcelUtility.getExcelStringData(1, 1, "PasswordResetPage");
+		String expectederrormessage = ExcelUtility.getExcelStringData(1, 2, Constants.FORGOTPASSWORD_PAGE);
+		String emailaddress = ExcelUtility.getExcelStringData(1, 1, Constants.FORGOTPASSWORD_PAGE);
 		
 		LoginPage login = new LoginPage(driver);
 		ForgotPasswordPage forgotpassword = login.forgotPasswordButton();
@@ -40,7 +42,7 @@ public class PasswordResetPageTest extends BaseClass{
 		forgotpassword.verifySendPasswordResetLinkButton();
 		forgotpassword.verifyPromptMessageForPasswordResetWithInvalidEmail();
 		String actualmessage = forgotpassword.verifyPromptMessageForPasswordResetWithInvalidEmail();
-		Assert.assertEquals(actualmessage, expectederrormessage, "Password Reset Failed");
+		Assert.assertEquals(actualmessage, expectederrormessage, Messages.MESSAGE_PASSWORDRESETSUCCESS);
 		
 		
 	}
