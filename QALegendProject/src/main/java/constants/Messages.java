@@ -8,6 +8,7 @@ public class Messages {
 	public static final String LOGIN_NEWUSERCREATEDFAILED ="Unexpected Login";
 	public static final String MESSAGE_PASSWORDRESTFAILED = "Password Reset Failed";
 	public static final String MESSAGE_PASSWORDRESETSUCCESS = "Password Reset Success";
+	public static final String MESSAGE_DATEMISMATCH = "Date Mismatch";
 	
 
 }

@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.DateUtility;
+
 public class HomePage {
 	WebDriver driver;
 	public HomePage(WebDriver driver)
@@ -27,6 +29,8 @@ public class HomePage {
 	WebElement signoutbutton;
 	@FindBy(xpath="//section[@class='content-header']")
 	WebElement actualwelcomemessagefieldafterloginwithcreateduser;
+	@FindBy(xpath="//div[@class='m-8 pull-left mt-15 hidden-xs']")
+	WebElement logindatefield;
 	
 	public String getLoginText()
 	{
@@ -55,6 +59,14 @@ public class HomePage {
 		String actualmessage = actualwelcomemessagefieldafterloginwithcreateduser.getText();
 		return actualmessage;
 	}
-	
+	public String getLoginDate()
+	{
+		String logindate = logindatefield.getText();
+		return logindate;
+	}
+	public String getCurrentDate()
+	{
+		return DateUtility.getUserLoginDate("dd-MM-YYYY");
+	}
 
 }

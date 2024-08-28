@@ -1,6 +1,9 @@
 package org.automationcore;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -13,12 +16,28 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import constants.Constants;
 import utilities.WaitUtility;
 
 public class BaseClass {
 	public WebDriver driver;
-	public void initializeBrowser(String Browser)
+	public FileInputStream file;
+	public Properties property;
+	public void initializeBrowser(String Browser) 
 	{
+		property = new Properties();
+		try {
+			file = new FileInputStream(Constants.CONFIG_FILE);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			property.load(file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if(Browser.equals("Chrome")) 
 		{
 			driver = new ChromeDriver();
@@ -36,7 +55,8 @@ public class BaseClass {
 			throw new RuntimeException("Invalid browser");
 		}
 		driver.manage().window().maximize();
-		driver.get("https://qalegend.com/billing/public/login");
+		//driver.get("https://qalegend.com/billing/public/login");
+		driver.get(property.getProperty(Browser));
 		WaitUtility.waitForAnElement(driver);
 	}
 	@BeforeMethod
