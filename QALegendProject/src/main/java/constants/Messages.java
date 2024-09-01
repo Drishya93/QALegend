@@ -9,6 +9,9 @@ public class Messages {
 	public static final String MESSAGE_PASSWORDRESTFAILED = "Password Reset Failed";
 	public static final String MESSAGE_PASSWORDRESETSUCCESS = "Password Reset Success";
 	public static final String MESSAGE_DATEMISMATCH = "Date Mismatch";
+	public static final String MESSAGE_VIEWUSERPAGEMISMATCH = "Unexpected Page";
+	public static final String MESSAGE_EDITUSERMISMATCH = "Unexpected User";
+	public static final String MESSAGE_EMAILIDMISMATCH = "Email id mismatch";
 	
 
 }

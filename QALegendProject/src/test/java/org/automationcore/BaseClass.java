@@ -56,7 +56,8 @@ public class BaseClass {
 		}
 		driver.manage().window().maximize();
 		//driver.get("https://qalegend.com/billing/public/login");
-		driver.get(property.getProperty(Browser));
+		
+		driver.get(property.getProperty("url"));
 		WaitUtility.waitForAnElement(driver);
 	}
 	@BeforeMethod

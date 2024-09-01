@@ -8,6 +8,8 @@ public class Constants {
 	public static final String LOGIN_PAGE = "LoginPage";
 	public static final String USERMANAGEMENT_PAGE = "UserManagementPage";
 	public static final String FORGOTPASSWORD_PAGE = "PasswordResetPage";
+	public static final String VIEWUSER_PAGE = "ViewUserPage";
+	public static final String EDITUSER_PAGE = "EditUserPage";
 	public static final String EMAIL_RANDOMDATADOT = ".";
 	public static final String EMAIL_RANDOMDATASUFFIX = "@yahoo.com";
 	public static final String USERNAME_RANDOMDATASUFFIX = "@1";

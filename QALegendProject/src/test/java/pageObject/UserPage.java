@@ -25,6 +25,13 @@ public class UserPage {
 	WebElement addbutton;
 	@FindBy(xpath="//i[@class='fa fa-dashboard']")
 	WebElement homeicon;
+	@FindBy(xpath="//a[@class='btn btn-xs btn-info']")
+	WebElement viewbutton;
+	@FindBy(xpath="//a[@class='btn btn-xs btn-primary']")
+	WebElement editbutton;
+	@FindBy(xpath="//table[@id='users_table']/tbody/tr[1]/td[2]")
+	WebElement firstnameintable;
+	
 	
 	
 	
@@ -55,6 +62,19 @@ public class UserPage {
 	{
 		homeicon.click();
 		return new HomePage(driver);
+	}
+	public void verifyViewButton()
+	{
+		viewbutton.click();
+	}
+	public void verifyeditButton()
+	{
+		editbutton.click();
+	}
+	public String verifySearchResultsafteredit()
+	{
+		String firstname = firstnameintable.getText();
+		return firstname;
 	}
 
 }

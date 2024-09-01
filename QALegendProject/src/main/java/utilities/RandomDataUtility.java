@@ -17,4 +17,11 @@ public static String getLastName()
 	return lastname;
 }
 
+public static String getEmailid()
+{
+	faker = new Faker();
+	String emailid = faker.internet().emailAddress();
+	return emailid;
+}
+
 }
