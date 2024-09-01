@@ -7,6 +7,7 @@
       <class name="testscripts.LoginPageTest"/>
       <class name="testscripts.HomePageTest"/>
       <class name="testscripts.AddUserPageTest"/>
+      <class name="testscripts.UserProfilePageTest"/>
     </classes>
   </test> <!-- testng -->
 </suite> <!-- Suite -->

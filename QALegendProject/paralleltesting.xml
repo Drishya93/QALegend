@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel = "tests" thread-count = "5">
+  <test  name="HomePageTest">
+  <parameter name="Browser" value="Chrome"></parameter>
+    <classes>
+      
+      <class name="testscripts.HomePageTest"/>
+      
+    </classes>
+  </test> <!-- testng -->
+   <test  name="LoginPageTest">
+   <parameter name="Browser" value="Chrome"></parameter>
+   <classes>
+      
+      <class name="testscripts.LoginPageTest"/>
+      
+    </classes>
+  </test> <!-- testng -->
+  
+   <test  name="PasswordResetPageTest">
+   <parameter name="Browser" value="Chrome"></parameter>
+   <classes>
+      
+      <class name="testscripts.PasswordResetPageTest"/>
+      
+    </classes>
+  </test> <!-- testng -->
+  
+   <test  name="AddUserPageTest">
+   <parameter name="Browser" value="Chrome"></parameter>
+   <classes>
+      
+      <class name="testscripts.AddUserPageTest"/>
+      
+    </classes>
+  </test> <!-- testng -->
+  
+  <test  name="UserProfilePageTest">
+   <parameter name="Browser" value="Chrome"></parameter>
+   <classes>
+      
+      <class name="testscripts.UserProfilePageTest"/>
+      
+    </classes>
+  </test> <!-- testng -->
+  
+</suite> <!-- Suite -->
+
+ 
+      
+      
+     
