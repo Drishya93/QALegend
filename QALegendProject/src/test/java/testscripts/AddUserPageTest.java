@@ -26,7 +26,7 @@ import utilities.RandomDataUtility;
 
 public class AddUserPageTest extends BaseClass{
 	
-	@Test
+	@Test(groups={"Smoke","Regression"})
 	
 	public void verifyUserCreation()
 	{
@@ -80,7 +80,7 @@ public class AddUserPageTest extends BaseClass{
 	}
 		
 	
-	@Test
+	@Test(groups="Regression")
 		public void verifyLoginWithNewlyAddedUser()
 		{
 		

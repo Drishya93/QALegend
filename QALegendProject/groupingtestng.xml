@@ -5,6 +5,7 @@
 <run>
 <include name="Sanity"></include>
 <include name="Smoke"></include>
+<include name="Regression"></include>
 </run>
 </groups>
 <listeners>
@@ -17,11 +18,10 @@
       <class name="testscripts.HomePageTest"></class>
       <class name="testscripts.LoginPageTest"></class>
        <class name="testscripts.UserPageTest"/>
-     <!--  <class name="testscripts.LoginPageTest"/>
+       <class name="testscripts.LoginPageTest"/>
      <class name="testscripts.AddUserPageTest"/>
-      
       <class name="testscripts.UserProfilePageTest"/>
-      <class name="testscripts.PasswordResetPageTest"/> -->
+      <class name="testscripts.PasswordResetPageTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

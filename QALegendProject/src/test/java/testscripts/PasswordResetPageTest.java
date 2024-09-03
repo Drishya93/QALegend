@@ -13,7 +13,7 @@ import pageObject.LoginPage;
 import utilities.ExcelUtility;
 
 public class PasswordResetPageTest extends BaseClass{
-	@Test
+	@Test(groups="Regression")
 	public void verifyPasswordResetWithValidEmail()
 	{
 		String emailaddress = ExcelUtility.getExcelStringData(1, 0, Constants.FORGOTPASSWORD_PAGE);
@@ -29,7 +29,7 @@ public class PasswordResetPageTest extends BaseClass{
 		
 	}
 		
-	@Test
+	@Test(groups="Regression")
 	
 	public void verifyPasswordResetWithInvalidEmail()
 	{
