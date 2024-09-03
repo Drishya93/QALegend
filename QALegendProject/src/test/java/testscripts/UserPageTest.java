@@ -1,15 +1,6 @@
 package testscripts;
 
-import java.time.Duration;
-import java.util.List;
-
 import org.automationcore.BaseClass;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,35 +15,30 @@ import pageObject.ViewDetailsPage;
 import utilities.ExcelUtility;
 import utilities.RandomDataUtility;
 
-public class AddUserPageTest extends BaseClass{
-	
-	@Test
-	
-	public void verifyUserCreation()
+public class UserPageTest extends BaseClass{
+	@Test(groups="Sanity")
+	public void verifyViewUserDetails()
 	{
-		
 		String prefix = ExcelUtility.getExcelStringData(1, 0, Constants.USERMANAGEMENT_PAGE);
 		String expectedRole = ExcelUtility.getExcelStringData(1, 1, Constants.USERMANAGEMENT_PAGE);
 		String commission = ExcelUtility.getExcelIntegerData(1, 2, Constants.USERMANAGEMENT_PAGE) ;
 		String firstname = RandomDataUtility.getFirstName();
 		String lastname = RandomDataUtility.getLastName();
-		//String email = firstname + "." + lastname + "@yahoo.com";
+		
 		String email = firstname + Constants.EMAIL_RANDOMDATADOT + lastname + Constants.EMAIL_RANDOMDATASUFFIX;
-		//String username = firstname + "@1";
 		String username = firstname + Constants.USERNAME_RANDOMDATASUFFIX;
 		String password1 = firstname + "." + lastname;
 		String confirmpassword = password1;
-		//String expectedwelcomemessagefield = "Welcome" + " " + firstname + ",";
-		String expectedwelcomemessagefield = Constants.WELCOMEMESSAGE_EXPECTEDPREFIX + " " + firstname + Constants.WELCOMEMESSAGE_EXPECTEDSUFFIX;
-		String expectedusername = username;
+		String expectedtext = ExcelUtility.getExcelStringData(1, 0, Constants.VIEWUSER_PAGE);
+		
 		String user_name = ExcelUtility.getExcelStringData(1, 0, Constants.LOGIN_PAGE);
 		String pasword = ExcelUtility.getExcelIntegerData(1, 1, Constants.LOGIN_PAGE);
-		
 		LoginPage login = new LoginPage(driver);
 		login.enterUserName(user_name);
 		login.enterPassword(pasword);
 		HomePage home = login.clickOnLoginButton();
 		home.clickEndTourButton();
+		
 		
 		UserPage user = new UserPage(driver);
 		user.verifyUserManagementDropDown();
@@ -68,37 +54,35 @@ public class AddUserPageTest extends BaseClass{
 		adduser.verifyConfirmPasswordField(confirmpassword);
 		adduser.verifyCommisionField(commission);
 		adduser.verifySaveButton(); 
+		
+		
 		user.verifySearchField(username);
-		//user.verifySearchResults();
-		String actualusername = user.verifySearchResults();
-		Assert.assertEquals(actualusername, expectedusername,Messages.USERCREATION_UNEXPECTEDUSERNAME);
-		 
-	
+		user.verifySearchResults();
+		user.verifyViewButton();
+		ViewDetailsPage view = new ViewDetailsPage(driver);
+		String actualtext = view.verifyViewUserText();
+		Assert.assertEquals(actualtext, expectedtext, Messages.MESSAGE_VIEWUSERPAGEMISMATCH);
 		
 	
-		
 	}
-		
+	@Test(groups="Sanity")
 	
-	@Test
-		public void verifyLoginWithNewlyAddedUser()
-		{
-		
+	public void verifyEditUserDetails()
+	{
 		String prefix = ExcelUtility.getExcelStringData(1, 0, Constants.USERMANAGEMENT_PAGE);
 		String expectedRole = ExcelUtility.getExcelStringData(1, 1, Constants.USERMANAGEMENT_PAGE);
 		String commission = ExcelUtility.getExcelIntegerData(1, 2, Constants.USERMANAGEMENT_PAGE) ;
 		String firstname = RandomDataUtility.getFirstName();
 		String lastname = RandomDataUtility.getLastName();
-		//String email = firstname + "." + lastname + "@yahoo.com";
+		
 		String email = firstname + Constants.EMAIL_RANDOMDATADOT + lastname + Constants.EMAIL_RANDOMDATASUFFIX;
-		//String username = firstname + "@1";
 		String username = firstname + Constants.USERNAME_RANDOMDATASUFFIX;
 		String password1 = firstname + "." + lastname;
 		String confirmpassword = password1;
-		//String expectedwelcomemessagefield = "Welcome" + " " + firstname + ",";
-		String expectedwelcomemessagefield = Constants.WELCOMEMESSAGE_EXPECTEDPREFIX + " " + firstname + Constants.WELCOMEMESSAGE_EXPECTEDSUFFIX;
+		String expectedtext = ExcelUtility.getExcelStringData(1, 0, Constants.VIEWUSER_PAGE);
+		String first_name = ExcelUtility.getExcelStringData(1, 0, Constants.EDITUSER_PAGE);
+		String last_name = ExcelUtility.getExcelStringData(1, 1, Constants.EDITUSER_PAGE);
 		
-		String expectedusername = username;
 		String user_name = ExcelUtility.getExcelStringData(1, 0, Constants.LOGIN_PAGE);
 		String pasword = ExcelUtility.getExcelIntegerData(1, 1, Constants.LOGIN_PAGE);
 		LoginPage login = new LoginPage(driver);
@@ -106,6 +90,7 @@ public class AddUserPageTest extends BaseClass{
 		login.enterPassword(pasword);
 		HomePage home = login.clickOnLoginButton();
 		home.clickEndTourButton();
+		
 		
 		UserPage user = new UserPage(driver);
 		user.verifyUserManagementDropDown();
@@ -122,20 +107,21 @@ public class AddUserPageTest extends BaseClass{
 		adduser.verifyCommisionField(commission);
 		adduser.verifySaveButton(); 
 		
-			
-			user.clickHomeIcon();
-			
-			home.clickAdminButton();
-			home.clickSignoutButton();
-			
-			login.enterUserName(username);
-			login.enterPassword(password1);
-			login.clickOnLoginButton();
-			String actualwelcomemessage = home.verifyWelcomeMessageAfterUserCreationAndLogin();
-			Assert.assertEquals(actualwelcomemessage, expectedwelcomemessagefield , Messages.LOGIN_NEWUSERCREATEDFAILED);
-			
+		
+		user.verifySearchField(username);
+		user.verifySearchResults();
+		user.verifyeditButton();
+		//user.verifyeditButton();
+		EditUserPage edit = new EditUserPage(driver);
+		edit.editFirstNmae(first_name);
+		edit.editLastName(last_name);
+		edit.clickUpdateButton();
+		user.verifySearchField(first_name);
+		String actual_firstname = user.verifySearchResultsafteredit();
+		String Expected_firstname = prefix +" "+ first_name + " " + last_name;
+		Assert.assertEquals(actual_firstname, Expected_firstname, Messages.MESSAGE_EDITUSERFAILED);
+		
+		
 	}
-	
-	
-	
+
 }

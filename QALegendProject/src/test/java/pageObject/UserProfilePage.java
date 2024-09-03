@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utilities.WaitUtility;
+
 
 public class UserProfilePage {
 	WebDriver driver;
@@ -21,6 +21,8 @@ public class UserProfilePage {
 	WebElement emailfield;
 	@FindBy(xpath="//button[text()='Update']")
 	WebElement updatebutton;
+	@FindBy(xpath="//div[text()='Profile updated successfully']")
+	WebElement updationpopup;
 	
 	
 	public void verifyProfileButton()
@@ -39,10 +41,8 @@ public class UserProfilePage {
 		updatebutton.click();
 	}
 	
-	public String  verifyTextInEmailField()
+	public boolean isUserProfileUpdatePromptVisible()
 	{
-		emailfield.click();
-		WaitUtility.waitForAnElementToBeClickable(driver,emailfield);
-		return emailfield.getText();
+		return updationpopup.isDisplayed();
 	}
 }

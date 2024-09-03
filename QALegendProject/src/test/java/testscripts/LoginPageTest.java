@@ -31,7 +31,7 @@ import utilities.ExcelUtility;
 import utilities.RandomDataUtility;
 
 public class LoginPageTest extends BaseClass{
-	@Test
+	@Test(groups="Sanity")
 	public void verifyLoginWithValidCredentials()
 	{
 		String user_name = ExcelUtility.getExcelStringData(1, 0, Constants.LOGIN_PAGE);

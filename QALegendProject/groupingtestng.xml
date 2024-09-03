@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<groups>
+<run>
+<include name="Sanity"></include>
+<include name="Smoke"></include>
+</run>
+</groups>
+<listeners>
+<listener class-name="listeners.AnnotationTransformer"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+  <parameter name = "Browser"  value = "Chrome"> </parameter>
+    <classes>
+       
+      <class name="testscripts.HomePageTest"></class>
+      <class name="testscripts.LoginPageTest"></class>
+       <class name="testscripts.UserPageTest"/>
+     <!--  <class name="testscripts.LoginPageTest"/>
+     <class name="testscripts.AddUserPageTest"/>
+      
+      <class name="testscripts.UserProfilePageTest"/>
+      <class name="testscripts.PasswordResetPageTest"/> -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

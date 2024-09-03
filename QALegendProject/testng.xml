@@ -3,11 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="testng">
     <classes>
-       <class name="testscripts.PasswordResetPageTest"/> 
+        
       <class name="testscripts.LoginPageTest"/>
       <class name="testscripts.HomePageTest"/>
+     <!--   <class name="testscripts.PasswordResetPageTest"/>
       <class name="testscripts.AddUserPageTest"/>
-      <class name="testscripts.UserProfilePageTest"/>
+       <class name="testscripts.UserPageTest"/>
+      <class name="testscripts.UserProfilePageTest"/> -->
     </classes>
   </test> <!-- testng -->
 </suite> <!-- Suite -->

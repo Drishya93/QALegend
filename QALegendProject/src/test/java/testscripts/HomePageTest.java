@@ -11,7 +11,7 @@ import pageObject.LoginPage;
 import utilities.ExcelUtility;
 
 public class HomePageTest extends BaseClass {
-	@Test
+	@Test(groups="Smoke")
 	
 	public void verifyUserLoginDate()
 	{

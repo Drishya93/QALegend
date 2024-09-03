@@ -15,7 +15,9 @@ public class WaitUtility {
 	public static final long IMPLICITLYWAIT = 10;
 	public static final long EXPLICITLYWAIT = 10;
 	public static final long FLUENTWAIT = 10;
-	public static void waitForAnElement(WebDriver driver)
+	
+	
+public static void waitForAnElement(WebDriver driver)
 	{
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLYWAIT));
@@ -34,5 +36,16 @@ public static void waitForAnElementFrequentExecution(WebDriver driver , WebEleme
 	fluentwait.ignoring(NoSuchElementException.class);
 	
 	fluentwait.until(ExpectedConditions.elementToBeClickable(element));
+}
+public static void waitForAnElementToBeSelected(WebDriver driver , WebElement element)
+{
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITLYWAIT));
+	wait.until(ExpectedConditions.elementToBeSelected(element));
+}
+
+public static void waitForAFrameToBeAvailable(WebDriver driver , WebElement element)
+{
+	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(EXPLICITLYWAIT));
+	wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(element));
 }
 }
