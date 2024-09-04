@@ -16,7 +16,9 @@ public class Constants {
 	public static final String WELCOMEMESSAGE_EXPECTEDPREFIX = "Welcome";
 	public static final String WELCOMEMESSAGE_EXPECTEDSUFFIX = ",";
 	public static final String CONFIG_FILE = System.getProperty("user.dir")+File.separator+"src"+File.separator+"main"+File.separator+"resources"+File.separator+"config.properties";
-	
+	public static final long IMPLICITLYWAIT = 10;
+	public static final long EXPLICITLYWAIT = 10;
+	public static final long FLUENTWAIT = 10;
 	
 
 }

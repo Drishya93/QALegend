@@ -55,8 +55,6 @@ public class BaseClass {
 			throw new RuntimeException("Invalid browser");
 		}
 		driver.manage().window().maximize();
-		//driver.get("https://qalegend.com/billing/public/login");
-		
 		driver.get(property.getProperty("url"));
 		WaitUtility.waitForAnElement(driver);
 	}
@@ -72,7 +70,7 @@ public class BaseClass {
 		{
 			takeScreenShots(results);
 		}
-		//driver.close();
+		driver.close();
 	}
 	
 	public void takeScreenShots(ITestResult results) throws IOException

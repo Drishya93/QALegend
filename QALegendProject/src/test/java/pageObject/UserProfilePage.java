@@ -15,8 +15,7 @@ public class UserProfilePage {
 	PageFactory.initElements(driver , this);
 	}
 	
-	@FindBy(xpath="//a[text()='Profile']")
-	WebElement profilebutton ;
+	
 	@FindBy(xpath="//input[@id='email']")
 	WebElement emailfield;
 	@FindBy(xpath="//button[text()='Update']")
@@ -25,10 +24,7 @@ public class UserProfilePage {
 	WebElement updationpopup;
 	
 	
-	public void verifyProfileButton()
-	{
-		profilebutton.click();
-	}
+	
 	
 	public void verifyEmailField(String email)
 	{

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import constants.Constants;
 import constants.Messages;
+import pageObject.AdminPage;
 import pageObject.HomePage;
 import pageObject.LoginPage;
 import pageObject.UserPage;
@@ -32,8 +33,8 @@ public class UserProfilePageTest extends BaseClass{
 	UserPage user = new UserPage(driver);
 	user.clickHomeIcon();
 	home.clickAdminButton();
-	UserProfilePage profilepage = new UserProfilePage(driver);
-	profilepage.verifyProfileButton();
+	AdminPage admin = new AdminPage(driver);
+	UserProfilePage profilepage = admin.verifyProfileButton();
 	profilepage.verifyEmailField(emailid);
 	profilepage.verifyUpdateButton();
 	boolean expectedprompt = profilepage.isUserProfileUpdatePromptVisible();
