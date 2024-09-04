@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-04T11:48:21 IST" name="Default suite" finished-at="2024-09-04T11:48:45 IST" duration-ms="24061">
+    <groups>
+      <group name="Regression">
+        <method signature="UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@4686afc2]" name="verifyUserProfileTest" class="testscripts.UserProfilePageTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test started-at="2024-09-04T11:48:21 IST" name="Default test" finished-at="2024-09-04T11:48:45 IST" duration-ms="24061">
+      <class name="testscripts.UserProfilePageTest">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscripts.UserProfilePageTest@4686afc2]" started-at="2024-09-04T11:48:21 IST" name="browserLaunch" finished-at="2024-09-04T11:48:26 IST" duration-ms="4353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method signature="verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@4686afc2]" started-at="2024-09-04T11:48:26 IST" name="verifyUserProfileTest" finished-at="2024-09-04T11:48:45 IST" duration-ms="19610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserProfileTest -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.UserProfilePageTest@4686afc2]" started-at="2024-09-04T11:48:45 IST" name="closeBrowser" finished-at="2024-09-04T11:48:45 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserProfileTest status=SUCCESS method=UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@4686afc2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testscripts.UserProfilePageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
