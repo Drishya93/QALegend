@@ -16,6 +16,7 @@ public class ViewDetailsPage {
 	@FindBy(xpath="//h1[text()='View User']")
 	WebElement viewusertext;
 	
+	
 	public String verifyViewUserText()
 	{
 		return viewusertext.getText();

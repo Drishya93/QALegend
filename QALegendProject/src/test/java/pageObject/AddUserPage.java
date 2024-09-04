@@ -23,8 +23,6 @@ public class AddUserPage {
 	WebElement lastnamefield;
 	@FindBy(xpath="//input[@id='email']")
 	WebElement emailfield;
-	//@FindBy(xpath="//span[@id='select2-role-container']")
-	//WebElement roledropdown;
 	@FindBy(xpath="//ul[@id='select2-role-results']")
 	WebElement roledropdown;
 	@FindBy(xpath="//input[@id='username']")
@@ -70,12 +68,6 @@ public class AddUserPage {
 	public void verifyCommisionField(String commision)
 	{
 		commisionfield.sendKeys(commision);
-	}
-	public void verifyRolesDropDown(String role)
-	{
-		//roledropdown.sendKeys(role);
-		//roledropdown.selectByValueFromDropDown();
-		PageUtility.selectByIndexFromDropDown(roledropdown, role);
 	}
 	public UserPage verifySaveButton()
 	{

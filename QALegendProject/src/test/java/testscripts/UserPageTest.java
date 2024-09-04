@@ -24,42 +24,36 @@ public class UserPageTest extends BaseClass{
 		String commission = ExcelUtility.getExcelIntegerData(1, 2, Constants.USERMANAGEMENT_PAGE) ;
 		String firstname = RandomDataUtility.getFirstName();
 		String lastname = RandomDataUtility.getLastName();
-		
 		String email = firstname + Constants.EMAIL_RANDOMDATADOT + lastname + Constants.EMAIL_RANDOMDATASUFFIX;
 		String username = firstname + Constants.USERNAME_RANDOMDATASUFFIX;
 		String password1 = firstname + "." + lastname;
 		String confirmpassword = password1;
 		String expectedtext = ExcelUtility.getExcelStringData(1, 0, Constants.VIEWUSER_PAGE);
-		
 		String user_name = ExcelUtility.getExcelStringData(1, 0, Constants.LOGIN_PAGE);
 		String pasword = ExcelUtility.getExcelIntegerData(1, 1, Constants.LOGIN_PAGE);
+		
+		
 		LoginPage login = new LoginPage(driver);
 		login.enterUserName(user_name);
 		login.enterPassword(pasword);
 		HomePage home = login.clickOnLoginButton();
 		home.clickEndTourButton();
-		
-		
-		UserPage user = new UserPage(driver);
-		user.verifyUserManagementDropDown();
-		user.verifyUserDropDown();
+		home.verifyUserManagementDropDown();
+		home.verifyUserDropDown();
+		UserPage user = new UserPage(driver); 
 		AddUserPage adduser = user.verifyAddUser();
 		adduser.verifyPrefixField(prefix);
 		adduser.verifyFirstNameField(firstname);
 		adduser.verifyLastNameField(lastname);
 		adduser.verifyEmailField(email);
-		//adduser.verifyRolesDropDown(expectedRole);
 		adduser.verifyUserNmaeField(username);
 		adduser.verifyPasswordField(password1);
 		adduser.verifyConfirmPasswordField(confirmpassword);
 		adduser.verifyCommisionField(commission);
 		adduser.verifySaveButton(); 
-		
-		
 		user.verifySearchField(username);
 		user.verifySearchResults();
-		user.verifyViewButton();
-		ViewDetailsPage view = new ViewDetailsPage(driver);
+		ViewDetailsPage view = user.verifyViewButton();
 		String actualtext = view.verifyViewUserText();
 		Assert.assertEquals(actualtext, expectedtext, Messages.MESSAGE_VIEWUSERPAGEMISMATCH);
 		
@@ -74,7 +68,6 @@ public class UserPageTest extends BaseClass{
 		String commission = ExcelUtility.getExcelIntegerData(1, 2, Constants.USERMANAGEMENT_PAGE) ;
 		String firstname = RandomDataUtility.getFirstName();
 		String lastname = RandomDataUtility.getLastName();
-		
 		String email = firstname + Constants.EMAIL_RANDOMDATADOT + lastname + Constants.EMAIL_RANDOMDATASUFFIX;
 		String username = firstname + Constants.USERNAME_RANDOMDATASUFFIX;
 		String password1 = firstname + "." + lastname;
@@ -82,37 +75,31 @@ public class UserPageTest extends BaseClass{
 		String expectedtext = ExcelUtility.getExcelStringData(1, 0, Constants.VIEWUSER_PAGE);
 		String first_name = ExcelUtility.getExcelStringData(1, 0, Constants.EDITUSER_PAGE);
 		String last_name = ExcelUtility.getExcelStringData(1, 1, Constants.EDITUSER_PAGE);
-		
 		String user_name = ExcelUtility.getExcelStringData(1, 0, Constants.LOGIN_PAGE);
 		String pasword = ExcelUtility.getExcelIntegerData(1, 1, Constants.LOGIN_PAGE);
+		
+		
 		LoginPage login = new LoginPage(driver);
 		login.enterUserName(user_name);
 		login.enterPassword(pasword);
 		HomePage home = login.clickOnLoginButton();
 		home.clickEndTourButton();
-		
-		
+		home.verifyUserManagementDropDown();
+		home.verifyUserDropDown();
 		UserPage user = new UserPage(driver);
-		user.verifyUserManagementDropDown();
-		user.verifyUserDropDown();
 		AddUserPage adduser = user.verifyAddUser();
 		adduser.verifyPrefixField(prefix);
 		adduser.verifyFirstNameField(firstname);
 		adduser.verifyLastNameField(lastname);
 		adduser.verifyEmailField(email);
-		//adduser.verifyRolesDropDown(expectedRole);
 		adduser.verifyUserNmaeField(username);
 		adduser.verifyPasswordField(password1);
 		adduser.verifyConfirmPasswordField(confirmpassword);
 		adduser.verifyCommisionField(commission);
 		adduser.verifySaveButton(); 
-		
-		
 		user.verifySearchField(username);
 		user.verifySearchResults();
-		user.verifyeditButton();
-		//user.verifyeditButton();
-		EditUserPage edit = new EditUserPage(driver);
+		EditUserPage edit = user.verifyeditButton();
 		edit.editFirstNmae(first_name);
 		edit.editLastName(last_name);
 		edit.clickUpdateButton();

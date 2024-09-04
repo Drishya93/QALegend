@@ -31,13 +31,18 @@ public class HomePage {
 	WebElement actualwelcomemessagefieldafterloginwithcreateduser;
 	@FindBy(xpath="//div[@class='m-8 pull-left mt-15 hidden-xs']")
 	WebElement logindatefield;
+	@FindBy(xpath="//span[@class='pull-right-container']")
+	WebElement usermanagementdropdown;
+	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a/span")
+	WebElement users;
+	
 	
 	public String getLoginText()
 	{
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		    WebElement loginElement = wait.until(ExpectedConditions.visibilityOf(loginname));
-	String logintext = loginname.getText();
-	return logintext;
+	   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       WebElement loginElement = wait.until(ExpectedConditions.visibilityOf(loginname));
+	   String logintext = loginname.getText();
+	   return logintext;
 	
 	}
 	public void clickEndTourButton()
@@ -67,6 +72,14 @@ public class HomePage {
 	public String getCurrentDate()
 	{
 		return DateUtility.getUserLoginDate("dd-MM-YYYY");
+	}
+	public void verifyUserManagementDropDown()
+	{
+		usermanagementdropdown.click();
+	}
+	public void verifyUserDropDown()
+	{
+		users.click();
 	}
 
 }

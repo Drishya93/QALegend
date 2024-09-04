@@ -13,10 +13,8 @@ public class UserPage {
 	PageFactory.initElements(driver , this);
 	}
 	
-	@FindBy(xpath="//span[@class='pull-right-container']")
-	WebElement usermanagementdropdown;
-	@FindBy(xpath="/html/body/div[2]/aside/section/ul/li[2]/ul/li[1]/a/span")
-	WebElement users;
+	
+	
 	@FindBy(xpath="//input[@class='form-control input-sm']")
 	WebElement SearchButton;
 	@FindBy(xpath="//table[@id='users_table']/tbody/tr[1]/td[1]")
@@ -34,16 +32,6 @@ public class UserPage {
 	
 	
 	
-	
-	
-	public void verifyUserManagementDropDown()
-	{
-		usermanagementdropdown.click();
-	}
-	public void verifyUserDropDown()
-	{
-		users.click();
-	}
 	public void verifySearchField(String username)
 	{
 		SearchButton.sendKeys(username);
@@ -63,13 +51,15 @@ public class UserPage {
 		homeicon.click();
 		return new HomePage(driver);
 	}
-	public void verifyViewButton()
+	public ViewDetailsPage verifyViewButton()
 	{
-		viewbutton.click();
+		 viewbutton.click();
+		 return new ViewDetailsPage(driver);
 	}
-	public void verifyeditButton()
+	public EditUserPage verifyeditButton()
 	{
 		editbutton.click();
+		return new EditUserPage(driver);
 	}
 	public String verifySearchResultsafteredit()
 	{

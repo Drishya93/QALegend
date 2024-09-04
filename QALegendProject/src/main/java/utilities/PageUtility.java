@@ -4,6 +4,8 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -53,4 +55,27 @@ public class PageUtility {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
+	
+	public static void verifySimpleAlerts( WebDriver driver)
+	{
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+	}
+	public static void verifyConfirmationAlerts( WebDriver driver)
+	{
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
+	}
+	public static void verifyPromptAlerts( String value, WebDriver driver)
+	{
+		Alert alert = driver.switchTo().alert();
+		alert.sendKeys(value);
+		alert.accept();
+	}
+	public static void verifyScrollActionUsingJavascriptExecutor(WebDriver driver)
+	{
+		JavascriptExecutor javascriptexecutor = (JavascriptExecutor)driver;
+		javascriptexecutor.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+	}
+	
 }
