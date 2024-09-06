@@ -58,12 +58,12 @@ public class BaseClass {
 		driver.get(property.getProperty("url"));
 		WaitUtility.waitForAnElement(driver);
 	}
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void browserLaunch()
 	{
 		initializeBrowser("Chrome");
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void closeBrowser(ITestResult results) throws IOException
 	{
 		if(results.getStatus() == ITestResult.FAILURE)

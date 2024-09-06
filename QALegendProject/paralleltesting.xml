@@ -14,7 +14,7 @@
     </classes>
   </test> <!-- testng -->
    <test  name="LoginPageTest">
-   <parameter name="Browser" value="FireFox"></parameter>
+   <parameter name="browser" value="FireFox"></parameter>
    <classes>
       
       <class name="testscripts.LoginPageTest"/>
@@ -23,7 +23,7 @@
   </test> <!-- testng -->
   
    <test  name="PasswordResetPageTest">
-   <parameter name="Browser" value="Edge"></parameter>
+   <parameter name="browser" value="Edge"></parameter>
    <classes>
       
       <class name="testscripts.PasswordResetPageTest"/>
