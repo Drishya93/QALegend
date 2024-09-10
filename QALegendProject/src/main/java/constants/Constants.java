@@ -19,6 +19,7 @@ public class Constants {
 	public static final long IMPLICITLYWAIT = 10;
 	public static final long EXPLICITLYWAIT = 10;
 	public static final long FLUENTWAIT = 10;
+	public static final String CURRENT_DATE = "dd-MM-YYYY";
 	
 
 }

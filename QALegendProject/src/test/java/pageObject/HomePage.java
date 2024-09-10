@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import constants.Constants;
 import utilities.DateUtility;
 
 public class HomePage {
@@ -71,7 +72,7 @@ public class HomePage {
 	}
 	public String getCurrentDate()
 	{
-		return DateUtility.getUserLoginDate("dd-MM-YYYY");
+		return DateUtility.getUserLoginDate(Constants.CURRENT_DATE);
 	}
 	public void verifyUserManagementDropDown()
 	{
