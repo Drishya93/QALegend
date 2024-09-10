@@ -15,6 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import constants.Constants;
 import utilities.WaitUtility;
@@ -59,9 +60,11 @@ public class BaseClass {
 		WaitUtility.waitForAnElement(driver);
 	}
 	@BeforeMethod(alwaysRun = true)
-	public void browserLaunch()
+	@Parameters("browser")
+	
+	public void setBrowser(String browserName)
 	{
-		initializeBrowser("Chrome");
+		initializeBrowser(browserName);
 	}
 	@AfterMethod(alwaysRun = true)
 	public void closeBrowser(ITestResult results) throws IOException

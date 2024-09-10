@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="listeners.AnnotationTransformer"/>
     <listener class-name="listeners.ExtendListeners"/>
   </listeners>
-  <test thread-count="5" name="UserTest(failed)">
-    <parameter name="Browser" value="FireFox"/>
+  <test thread-count="3" parallel="tests" name="PasswordResetPageTest(failed)">
+    <parameter name="browser" value="Edge"/>
     <classes>
+      <class name="testscripts.UserProfilePageTest">
+        <methods>
+          <include name="verifyUserProfileTest"/>
+          <include name="closeBrowser"/>
+          <include name="setBrowser"/>
+        </methods>
+      </class> <!-- testscripts.UserProfilePageTest -->
       <class name="testscripts.AddUserPageTest">
         <methods>
           <include name="closeBrowser"/>
-          <include name="browserLaunch"/>
+          <include name="verifyUserCreation"/>
           <include name="verifyLoginWithNewlyAddedUser"/>
+          <include name="setBrowser"/>
         </methods>
       </class> <!-- testscripts.AddUserPageTest -->
+      <class name="testscripts.PasswordResetPageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="verifyPasswordResetWithInvalidEmail"/>
+          <include name="verifyPasswordResetWithValidEmail"/>
+          <include name="setBrowser"/>
+        </methods>
+      </class> <!-- testscripts.PasswordResetPageTest -->
     </classes>
-  </test> <!-- UserTest(failed) -->
+  </test> <!-- PasswordResetPageTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

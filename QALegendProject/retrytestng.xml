@@ -6,7 +6,7 @@
 </listeners>
 
   <test  name="LoginPageTest">
-  <parameter name = "Browser"  value = "Chrome"> </parameter>
+  <parameter name = "browser"  value = "Chrome"> </parameter>
     <classes>
       
       <class name="testscripts.LoginPageTest"/>

@@ -13,7 +13,7 @@
 <listener class-name="listeners.ExtendListeners"></listener>
 </listeners>
   <test thread-count="5" name="Test">
-  <parameter name = "Browser"  value = "Chrome"> </parameter>
+  <parameter name = "browser"  value = "Chrome"> </parameter>
     <classes>
        
       <class name="testscripts.HomePageTest"></class>
