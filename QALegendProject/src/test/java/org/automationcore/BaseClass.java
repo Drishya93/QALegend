@@ -29,13 +29,13 @@ public class BaseClass {
 		try {
 			file = new FileInputStream(Constants.CONFIG_FILE);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		try {
 			property.load(file);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		if(Browser.equals("Chrome")) 
