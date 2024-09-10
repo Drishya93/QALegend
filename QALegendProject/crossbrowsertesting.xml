@@ -22,7 +22,7 @@
     <class name="testscripts.HomePageTest"/>
       
     </classes>
-    </test> <!-- testng -->
+    </test> 
     
     <test name="UserTest">
   <parameter name="browser" value="FireFox"></parameter>

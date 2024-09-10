@@ -47,7 +47,7 @@ public class BaseClass {
 		{
 			driver = new FirefoxDriver();
 		}
-		else if(Browser.equals("edge"))
+		else if(Browser.equals("Edge"))
 		{
 			driver = new EdgeDriver();
 		}

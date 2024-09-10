@@ -9,149 +9,39 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">PasswordResetPageTest</a></td><td class="num">0</td><td class="num attn">5</td><td class="num">0</td><td class="num">0</td><td class="num">672</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">HomePageTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">20,641</td><td></td><td></td></tr>
-<tr><td><a href="#t2">LoginPageTest</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">94,957</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">5</th><th class="num attn">5</th><th class="num">0</th><th class="num">0</th><th class="num">116,270</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">PasswordResetTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">34,313</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">LoginPageAndHomePageTest</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">92,158</td><td></td><td></td></tr>
+<tr><td><a href="#t2">UserTest</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">3</td><td class="num attn">1</td><td class="num">153,111</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">9</th><th class="num">0</th><th class="num attn">3</th><th class="num attn">1</th><th class="num">279,582</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PasswordResetPageTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="4">testscripts.AddUserPageTest</td><td><a href="#m0">closeBrowser</a></td><td rowspan="2">1725977686646</td><td rowspan="2">1</td></tr><tr class="failedeven"><td><a href="#m1">closeBrowser</a></td></tr><tr class="failedeven"><td><a href="#m2">setBrowser</a></td><td rowspan="2">1725977686554</td><td rowspan="2">4</td></tr><tr class="failedeven"><td><a href="#m3">setBrowser</a></td></tr><tr class="failedodd"><td rowspan="4">testscripts.PasswordResetPageTest</td><td><a href="#m4">closeBrowser</a></td><td rowspan="2">1725977686469</td><td rowspan="2">4</td></tr><tr class="failedodd"><td><a href="#m5">closeBrowser</a></td></tr><tr class="failedodd"><td><a href="#m6">setBrowser</a></td><td rowspan="2">1725977686258</td><td rowspan="2">68</td></tr><tr class="failedodd"><td><a href="#m7">setBrowser</a></td></tr><tr class="failedeven"><td rowspan="2">testscripts.UserProfilePageTest</td><td><a href="#m8">closeBrowser</a></td><td rowspan="1">1725977686828</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m9">setBrowser</a></td><td rowspan="1">1725977686811</td><td rowspan="1">2</td></tr><tr><th colspan="4">PasswordResetPageTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">testscripts.AddUserPageTest</td><td><a href="#m10">verifyLoginWithNewlyAddedUser</a></td><td rowspan="1">1725977686577</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m11">verifyUserCreation</a></td><td rowspan="1">1725977686779</td><td rowspan="1">1</td></tr><tr class="skippedodd"><td rowspan="2">testscripts.PasswordResetPageTest</td><td><a href="#m12">verifyPasswordResetWithInvalidEmail</a></td><td rowspan="1">1725977686378</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m13">verifyPasswordResetWithValidEmail</a></td><td rowspan="1">1725977686511</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td rowspan="1">testscripts.UserProfilePageTest</td><td><a href="#m14">verifyUserProfileTest</a></td><td rowspan="1">1725977686817</td><td rowspan="1">0</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">HomePageTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscripts.HomePageTest</td><td><a href="#m15">verifyUserLoginDate</a></td><td rowspan="1">1725977699820</td><td rowspan="1">6683</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">LoginPageTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">testscripts.LoginPageTest</td><td><a href="#m16">verifyErrorMessageWhileLoginWithInvalidCredentials</a></td><td rowspan="3">1725977747849</td><td rowspan="3">1505</td></tr><tr class="passedeven"><td><a href="#m17">verifyErrorMessageWhileLoginWithInvalidCredentials</a></td></tr><tr class="passedeven"><td><a href="#m18">verifyErrorMessageWhileLoginWithInvalidCredentials</a></td></tr><tr class="passedeven"><td><a href="#m19">verifyLoginWithValidCredentials</a></td><td rowspan="1">1725977774498</td><td rowspan="1">4879</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PasswordResetTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testscripts.PasswordResetPageTest</td><td><a href="#m0">verifyPasswordResetWithInvalidEmail</a></td><td rowspan="1">1725979158376</td><td rowspan="1">4334</td></tr><tr class="passedeven"><td><a href="#m1">verifyPasswordResetWithValidEmail</a></td><td rowspan="1">1725979167616</td><td rowspan="1">10455</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">LoginPageAndHomePageTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscripts.HomePageTest</td><td><a href="#m2">verifyUserLoginDate</a></td><td rowspan="1">1725979268019</td><td rowspan="1">3201</td></tr><tr class="passedodd"><td rowspan="4">testscripts.LoginPageTest</td><td><a href="#m3">verifyErrorMessageWhileLoginWithInvalidCredentials</a></td><td rowspan="3">1725979198008</td><td rowspan="3">1974</td></tr><tr class="passedodd"><td><a href="#m4">verifyErrorMessageWhileLoginWithInvalidCredentials</a></td></tr><tr class="passedodd"><td><a href="#m5">verifyErrorMessageWhileLoginWithInvalidCredentials</a></td></tr><tr class="passedodd"><td><a href="#m6">verifyLoginWithValidCredentials</a></td><td rowspan="1">1725979245456</td><td rowspan="1">9338</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">UserTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscripts.AddUserPageTest</td><td><a href="#m7">verifyUserCreation</a></td><td rowspan="1">1725979392317</td><td rowspan="1">11057</td></tr><tr><th colspan="4">UserTest &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="3">testscripts.AddUserPageTest</td><td><a href="#m8">verifyUserCreation</a></td><td rowspan="3">1725979315669</td><td rowspan="3">16036</td></tr><tr class="retriedeven"><td><a href="#m9">verifyUserCreation</a></td></tr><tr class="retriedeven"><td><a href="#m10">verifyUserCreation</a></td></tr><tr><th colspan="4">UserTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscripts.AddUserPageTest</td><td><a href="#m11">verifyLoginWithNewlyAddedUser</a></td><td rowspan="1">1725979284766</td><td rowspan="1">17748</td></tr><tr class="passedodd"><td rowspan="1">testscripts.UserProfilePageTest</td><td><a href="#m12">verifyUserProfileTest</a></td><td rowspan="1">1725979414839</td><td rowspan="1">8597</td></tr></tbody>
 </table>
-<h2>PasswordResetPageTest</h2><h3 id="m0">testscripts.AddUserPageTest#closeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=AddUserPageTest.verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
-	at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
+<h2>PasswordResetTest</h2><h3 id="m0">testscripts.PasswordResetPageTest#verifyPasswordResetWithInvalidEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscripts.PasswordResetPageTest#verifyPasswordResetWithValidEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>LoginPageAndHomePageTest</h2><h3 id="m2">testscripts.HomePageTest#verifyUserLoginDate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testscripts.LoginPageTest#verifyErrorMessageWhileLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>555</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testscripts.LoginPageTest#verifyErrorMessageWhileLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>123456</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testscripts.LoginPageTest#verifyErrorMessageWhileLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>555</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testscripts.LoginPageTest#verifyLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>UserTest</h2><h3 id="m7">testscripts.AddUserPageTest#verifyUserCreation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Unexpected Username found for newly created user expected [Kasey@1] but found [1750Reshma28]
+	at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscripts.AddUserPageTest#closeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
-	at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testscripts.AddUserPageTest#verifyUserCreation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Unexpected Username found for newly created user expected [Sandy@1] but found [1750Reshma28]
+	at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testscripts.AddUserPageTest#setBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testscripts.AddUserPageTest#verifyUserCreation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Unexpected Username found for newly created user expected [Shanel@1] but found [1750Reshma28]
+	at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testscripts.AddUserPageTest#setBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testscripts.AddUserPageTest#verifyUserCreation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Unexpected Username found for newly created user expected [Kent@1] but found [1750Reshma28]
+	at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testscripts.PasswordResetPageTest#closeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=PasswordResetPageTest.verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
-	at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testscripts.PasswordResetPageTest#closeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=PasswordResetPageTest.verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
-	at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testscripts.PasswordResetPageTest#setBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">testscripts.PasswordResetPageTest#setBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">testscripts.UserProfilePageTest#closeBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name={null} status=CREATED method=UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5117dd67] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.close()&quot; because &quot;this.driver&quot; is null
-	at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">testscripts.UserProfilePageTest#setBrowser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">testscripts.AddUserPageTest#verifyLoginWithNewlyAddedUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">testscripts.AddUserPageTest#verifyUserCreation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">testscripts.PasswordResetPageTest#verifyPasswordResetWithInvalidEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">testscripts.PasswordResetPageTest#verifyPasswordResetWithValidEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">testscripts.UserProfilePageTest#verifyUserProfileTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Invalid browser
-	at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-	at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>HomePageTest</h2><h3 id="m15">testscripts.HomePageTest#verifyUserLoginDate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>LoginPageTest</h2><h3 id="m16">testscripts.LoginPageTest#verifyErrorMessageWhileLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>123456</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">testscripts.LoginPageTest#verifyErrorMessageWhileLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>555</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">testscripts.LoginPageTest#verifyErrorMessageWhileLoginWithInvalidCredentials</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>test</td><td>555</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">testscripts.LoginPageTest#verifyLoginWithValidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testscripts.AddUserPageTest#verifyLoginWithNewlyAddedUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">testscripts.UserProfilePageTest#verifyUserProfileTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

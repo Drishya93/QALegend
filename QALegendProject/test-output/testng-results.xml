@@ -1,719 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="5" failed="0" skipped="5">
+<testng-results retried="3" ignored="3" total="16" passed="9" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-10T19:44:46 IST" name="Suite" finished-at="2024-09-10T19:46:21 IST" duration-ms="94957">
+  <suite started-at="2024-09-10T20:09:04 IST" name="Suite" finished-at="2024-09-10T20:13:45 IST" duration-ms="280967">
     <groups>
       <group name="Regression">
-        <method signature="LoginPageTest.verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@4066c471]" name="verifyLoginWithValidCredentials" class="testscripts.LoginPageTest"/>
-        <method signature="AddUserPageTest.verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" name="verifyLoginWithNewlyAddedUser" class="testscripts.AddUserPageTest"/>
-        <method signature="AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" name="verifyUserCreation" class="testscripts.AddUserPageTest"/>
-        <method signature="PasswordResetPageTest.verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" name="verifyPasswordResetWithInvalidEmail" class="testscripts.PasswordResetPageTest"/>
-        <method signature="PasswordResetPageTest.verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" name="verifyPasswordResetWithValidEmail" class="testscripts.PasswordResetPageTest"/>
-        <method signature="UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5117dd67]" name="verifyUserProfileTest" class="testscripts.UserProfilePageTest"/>
+        <method signature="PasswordResetPageTest.verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" name="verifyPasswordResetWithInvalidEmail" class="testscripts.PasswordResetPageTest"/>
+        <method signature="PasswordResetPageTest.verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" name="verifyPasswordResetWithValidEmail" class="testscripts.PasswordResetPageTest"/>
+        <method signature="LoginPageTest.verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@1f75a668]" name="verifyLoginWithValidCredentials" class="testscripts.LoginPageTest"/>
+        <method signature="AddUserPageTest.verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" name="verifyLoginWithNewlyAddedUser" class="testscripts.AddUserPageTest"/>
+        <method signature="AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" name="verifyUserCreation" class="testscripts.AddUserPageTest"/>
+        <method signature="UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5e403b4a]" name="verifyUserProfileTest" class="testscripts.UserProfilePageTest"/>
       </group> <!-- Regression -->
       <group name="Smoke">
-        <method signature="HomePageTest.verifyUserLoginDate()[pri:0, instance:testscripts.HomePageTest@2b72cb8a]" name="verifyUserLoginDate" class="testscripts.HomePageTest"/>
-        <method signature="LoginPageTest.verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@4066c471]" name="verifyLoginWithValidCredentials" class="testscripts.LoginPageTest"/>
-        <method signature="AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" name="verifyUserCreation" class="testscripts.AddUserPageTest"/>
+        <method signature="HomePageTest.verifyUserLoginDate()[pri:0, instance:testscripts.HomePageTest@35399441]" name="verifyUserLoginDate" class="testscripts.HomePageTest"/>
+        <method signature="LoginPageTest.verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@1f75a668]" name="verifyLoginWithValidCredentials" class="testscripts.LoginPageTest"/>
+        <method signature="AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" name="verifyUserCreation" class="testscripts.AddUserPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2024-09-10T19:44:46 IST" name="PasswordResetPageTest" finished-at="2024-09-10T19:44:46 IST" duration-ms="672">
-      <class name="testscripts.UserProfilePageTest">
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.UserProfilePageTest@5117dd67]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="2" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method signature="verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5117dd67]" started-at="2024-09-10T19:44:46 IST" name="verifyUserProfileTest" finished-at="2024-09-10T19:44:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserProfileTest -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.UserProfilePageTest@5117dd67]" started-at="2024-09-10T19:44:46 IST" name="closeBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="0" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5117dd67] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
-at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testscripts.UserProfilePageTest -->
-      <class name="testscripts.AddUserPageTest">
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="4" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method signature="verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" started-at="2024-09-10T19:44:46 IST" name="verifyLoginWithNewlyAddedUser" finished-at="2024-09-10T19:44:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithNewlyAddedUser -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" started-at="2024-09-10T19:44:46 IST" name="closeBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="1" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=AddUserPageTest.verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
-at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="1" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method signature="verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" started-at="2024-09-10T19:44:46 IST" name="verifyUserCreation" finished-at="2024-09-10T19:44:46 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserCreation -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@5e403b4a]" started-at="2024-09-10T19:44:46 IST" name="closeBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="2" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@5e403b4a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
-at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testscripts.AddUserPageTest -->
+    <test started-at="2024-09-10T20:09:04 IST" name="PasswordResetTest" finished-at="2024-09-10T20:09:38 IST" duration-ms="34313">
       <class name="testscripts.PasswordResetPageTest">
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="68" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method signature="verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" started-at="2024-09-10T19:44:46 IST" name="verifyPasswordResetWithInvalidEmail" finished-at="2024-09-10T19:44:46 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPasswordResetWithInvalidEmail -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" started-at="2024-09-10T19:44:46 IST" name="closeBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="4" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=PasswordResetPageTest.verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
-at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="1" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setBrowser -->
-        <test-method signature="verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" started-at="2024-09-10T19:44:46 IST" name="verifyPasswordResetWithValidEmail" finished-at="2024-09-10T19:44:46 IST" duration-ms="1" status="SKIP">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Invalid browser]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Invalid browser
-at org.automationcore.BaseClass.initializeBrowser(BaseClass.java:56)
-at org.automationcore.BaseClass.setBrowser(BaseClass.java:67)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPasswordResetWithValidEmail -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.PasswordResetPageTest@198d6542]" started-at="2024-09-10T19:44:46 IST" name="closeBrowser" finished-at="2024-09-10T19:44:46 IST" duration-ms="1" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=PasswordResetPageTest.verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@198d6542] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.close()" because "this.driver" is null
-at org.automationcore.BaseClass.closeBrowser(BaseClass.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:840)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testscripts.PasswordResetPageTest -->
-    </test> <!-- PasswordResetPageTest -->
-    <test started-at="2024-09-10T19:44:46 IST" name="HomePageTest" finished-at="2024-09-10T19:45:06 IST" duration-ms="20641">
-      <class name="testscripts.HomePageTest">
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.HomePageTest@2b72cb8a]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:44:59 IST" duration-ms="13562" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" started-at="2024-09-10T20:09:04 IST" name="setBrowser" finished-at="2024-09-10T20:09:18 IST" duration-ms="14121" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -724,37 +31,63 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="verifyUserLoginDate()[pri:0, instance:testscripts.HomePageTest@2b72cb8a]" started-at="2024-09-10T19:44:59 IST" name="verifyUserLoginDate" finished-at="2024-09-10T19:45:06 IST" duration-ms="6683" status="PASS">
+        <test-method signature="verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" started-at="2024-09-10T20:09:18 IST" name="verifyPasswordResetWithInvalidEmail" finished-at="2024-09-10T20:09:22 IST" duration-ms="4334" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginDate -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.HomePageTest@2b72cb8a]" started-at="2024-09-10T19:45:06 IST" name="closeBrowser" finished-at="2024-09-10T19:45:06 IST" duration-ms="272" status="PASS">
+        </test-method> <!-- verifyPasswordResetWithInvalidEmail -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" started-at="2024-09-10T20:09:22 IST" name="closeBrowser" finished-at="2024-09-10T20:09:23 IST" duration-ms="768" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginDate status=SUCCESS method=HomePageTest.verifyUserLoginDate()[pri:0, instance:testscripts.HomePageTest@2b72cb8a] output={null}]]]>
+                <![CDATA[[TestResult name=verifyPasswordResetWithInvalidEmail status=SUCCESS method=PasswordResetPageTest.verifyPasswordResetWithInvalidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testscripts.HomePageTest -->
-    </test> <!-- HomePageTest -->
-    <test started-at="2024-09-10T19:44:46 IST" name="LoginPageTest" finished-at="2024-09-10T19:46:21 IST" duration-ms="94957">
-      <class name="testscripts.LoginPageTest">
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:44:46 IST" name="setBrowser" finished-at="2024-09-10T19:45:01 IST" duration-ms="14772" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" started-at="2024-09-10T20:09:23 IST" name="setBrowser" finished-at="2024-09-10T20:09:27 IST" duration-ms="4076" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FireFox]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:45:01 IST" name="verifyErrorMessageWhileLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-09-10T19:45:03 IST" duration-ms="2630" status="PASS">
+        <test-method signature="verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" started-at="2024-09-10T20:09:27 IST" name="verifyPasswordResetWithValidEmail" finished-at="2024-09-10T20:09:38 IST" duration-ms="10455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordResetWithValidEmail -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499]" started-at="2024-09-10T20:09:38 IST" name="closeBrowser" finished-at="2024-09-10T20:09:38 IST" duration-ms="342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPasswordResetWithValidEmail status=SUCCESS method=PasswordResetPageTest.verifyPasswordResetWithValidEmail()[pri:0, instance:testscripts.PasswordResetPageTest@7f8a9499] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testscripts.PasswordResetPageTest -->
+    </test> <!-- PasswordResetTest -->
+    <test started-at="2024-09-10T20:09:39 IST" name="LoginPageAndHomePageTest" finished-at="2024-09-10T20:11:11 IST" duration-ms="92158">
+      <class name="testscripts.LoginPageTest">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:09:39 IST" name="setBrowser" finished-at="2024-09-10T20:09:58 IST" duration-ms="18512" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method signature="verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:09:58 IST" name="verifyErrorMessageWhileLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-09-10T20:09:59 IST" duration-ms="1974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -770,29 +103,29 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyErrorMessageWhileLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:45:03 IST" name="closeBrowser" finished-at="2024-09-10T19:45:07 IST" duration-ms="3423" status="PASS">
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:09:59 IST" name="closeBrowser" finished-at="2024-09-10T20:10:00 IST" duration-ms="354" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyErrorMessageWhileLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471] output={null}]]]>
+                <![CDATA[[TestResult name=verifyErrorMessageWhileLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:45:07 IST" name="setBrowser" finished-at="2024-09-10T19:45:47 IST" duration-ms="40758" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:00 IST" name="setBrowser" finished-at="2024-09-10T20:10:23 IST" duration-ms="22926" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FireFox]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:45:47 IST" name="verifyErrorMessageWhileLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-09-10T19:45:49 IST" duration-ms="1505" status="PASS">
+        <test-method signature="verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:23 IST" name="verifyErrorMessageWhileLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-09-10T20:10:24 IST" duration-ms="1296" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -808,29 +141,29 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyErrorMessageWhileLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:45:49 IST" name="closeBrowser" finished-at="2024-09-10T19:45:50 IST" duration-ms="1625" status="PASS">
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:24 IST" name="closeBrowser" finished-at="2024-09-10T20:10:24 IST" duration-ms="296" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyErrorMessageWhileLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471] output={null}]]]>
+                <![CDATA[[TestResult name=verifyErrorMessageWhileLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:45:50 IST" name="setBrowser" finished-at="2024-09-10T19:46:01 IST" duration-ms="10097" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:24 IST" name="setBrowser" finished-at="2024-09-10T20:10:37 IST" duration-ms="12731" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FireFox]]>
+                <![CDATA[Edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:46:01 IST" name="verifyErrorMessageWhileLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-09-10T19:46:02 IST" duration-ms="1386" status="PASS">
+        <test-method signature="verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:37 IST" name="verifyErrorMessageWhileLoginWithInvalidCredentials" data-provider="InvalidUserCredentials" finished-at="2024-09-10T20:10:39 IST" duration-ms="1540" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -846,18 +179,76 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyErrorMessageWhileLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:46:02 IST" name="closeBrowser" finished-at="2024-09-10T19:46:04 IST" duration-ms="1721" status="PASS">
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:39 IST" name="closeBrowser" finished-at="2024-09-10T20:10:39 IST" duration-ms="194" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyErrorMessageWhileLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471] output={null}]]]>
+                <![CDATA[[TestResult name=verifyErrorMessageWhileLoginWithInvalidCredentials status=SUCCESS method=LoginPageTest.verifyErrorMessageWhileLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:46:04 IST" name="setBrowser" finished-at="2024-09-10T19:46:14 IST" duration-ms="10305" status="PASS">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:39 IST" name="setBrowser" finished-at="2024-09-10T20:10:45 IST" duration-ms="6116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method signature="verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:45 IST" name="verifyLoginWithValidCredentials" finished-at="2024-09-10T20:10:54 IST" duration-ms="9338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithValidCredentials -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@1f75a668]" started-at="2024-09-10T20:10:54 IST" name="closeBrowser" finished-at="2024-09-10T20:10:55 IST" duration-ms="298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithValidCredentials status=SUCCESS method=LoginPageTest.verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@1f75a668] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testscripts.LoginPageTest -->
+      <class name="testscripts.HomePageTest">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.HomePageTest@35399441]" started-at="2024-09-10T20:10:55 IST" name="setBrowser" finished-at="2024-09-10T20:11:08 IST" duration-ms="12922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method signature="verifyUserLoginDate()[pri:0, instance:testscripts.HomePageTest@35399441]" started-at="2024-09-10T20:11:08 IST" name="verifyUserLoginDate" finished-at="2024-09-10T20:11:11 IST" duration-ms="3201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginDate -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.HomePageTest@35399441]" started-at="2024-09-10T20:11:11 IST" name="closeBrowser" finished-at="2024-09-10T20:11:11 IST" duration-ms="404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginDate status=SUCCESS method=HomePageTest.verifyUserLoginDate()[pri:0, instance:testscripts.HomePageTest@35399441] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testscripts.HomePageTest -->
+    </test> <!-- LoginPageAndHomePageTest -->
+    <test started-at="2024-09-10T20:11:11 IST" name="UserTest" finished-at="2024-09-10T20:13:45 IST" duration-ms="153111">
+      <class name="testscripts.UserProfilePageTest">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.UserProfilePageTest@5e403b4a]" started-at="2024-09-10T20:13:25 IST" name="setBrowser" finished-at="2024-09-10T20:13:34 IST" duration-ms="9701" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -868,22 +259,326 @@ at java.base/java.lang.Thread.run(Thread.java:840)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method signature="verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:46:14 IST" name="verifyLoginWithValidCredentials" finished-at="2024-09-10T19:46:19 IST" duration-ms="4879" status="PASS">
+        <test-method signature="verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5e403b4a]" started-at="2024-09-10T20:13:34 IST" name="verifyUserProfileTest" finished-at="2024-09-10T20:13:43 IST" duration-ms="8597" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginWithValidCredentials -->
-        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.LoginPageTest@4066c471]" started-at="2024-09-10T19:46:19 IST" name="closeBrowser" finished-at="2024-09-10T19:46:21 IST" duration-ms="1725" status="PASS">
+        </test-method> <!-- verifyUserProfileTest -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.UserProfilePageTest@5e403b4a]" started-at="2024-09-10T20:13:43 IST" name="closeBrowser" finished-at="2024-09-10T20:13:45 IST" duration-ms="1631" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginWithValidCredentials status=SUCCESS method=LoginPageTest.verifyLoginWithValidCredentials()[pri:0, instance:testscripts.LoginPageTest@4066c471] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserProfileTest status=SUCCESS method=UserProfilePageTest.verifyUserProfileTest()[pri:0, instance:testscripts.UserProfilePageTest@5e403b4a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- testscripts.LoginPageTest -->
-    </test> <!-- LoginPageTest -->
+      </class> <!-- testscripts.UserProfilePageTest -->
+      <class name="testscripts.AddUserPageTest">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:11:11 IST" name="setBrowser" finished-at="2024-09-10T20:11:24 IST" duration-ms="12795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method signature="verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:11:24 IST" name="verifyLoginWithNewlyAddedUser" finished-at="2024-09-10T20:11:42 IST" duration-ms="17748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithNewlyAddedUser -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:11:42 IST" name="closeBrowser" finished-at="2024-09-10T20:11:44 IST" duration-ms="2082" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginWithNewlyAddedUser status=SUCCESS method=AddUserPageTest.verifyLoginWithNewlyAddedUser()[pri:0, instance:testscripts.AddUserPageTest@198d6542] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:11:44 IST" name="setBrowser" finished-at="2024-09-10T20:11:55 IST" duration-ms="11069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method retried="true" signature="verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:11:55 IST" name="verifyUserCreation" finished-at="2024-09-10T20:12:11 IST" duration-ms="16036" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected Username found for newly created user expected [Sandy@1] but found [1750Reshma28]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected Username found for newly created user expected [Sandy@1] but found [1750Reshma28]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCreation -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:11 IST" name="closeBrowser" finished-at="2024-09-10T20:12:13 IST" duration-ms="1898" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserCreation status=SKIP method=AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:13 IST" name="setBrowser" finished-at="2024-09-10T20:12:23 IST" duration-ms="10076" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method retried="true" signature="verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:23 IST" name="verifyUserCreation" finished-at="2024-09-10T20:12:34 IST" duration-ms="10514" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected Username found for newly created user expected [Kent@1] but found [1750Reshma28]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected Username found for newly created user expected [Kent@1] but found [1750Reshma28]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCreation -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:34 IST" name="closeBrowser" finished-at="2024-09-10T20:12:35 IST" duration-ms="1518" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserCreation status=SKIP method=AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:35 IST" name="setBrowser" finished-at="2024-09-10T20:12:47 IST" duration-ms="11444" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method retried="true" signature="verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:47 IST" name="verifyUserCreation" finished-at="2024-09-10T20:12:57 IST" duration-ms="10795" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected Username found for newly created user expected [Shanel@1] but found [1750Reshma28]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected Username found for newly created user expected [Shanel@1] but found [1750Reshma28]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCreation -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:57 IST" name="closeBrowser" finished-at="2024-09-10T20:12:59 IST" duration-ms="1663" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserCreation status=SKIP method=AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:12:59 IST" name="setBrowser" finished-at="2024-09-10T20:13:12 IST" duration-ms="12676" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FireFox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBrowser -->
+        <test-method signature="verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:13:12 IST" name="verifyUserCreation" finished-at="2024-09-10T20:13:23 IST" duration-ms="11057" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected Username found for newly created user expected [Kasey@1] but found [1750Reshma28]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected Username found for newly created user expected [Kasey@1] but found [1750Reshma28]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at testscripts.AddUserPageTest.verifyUserCreation(AddUserPageTest.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserCreation -->
+        <test-method is-config="true" signature="closeBrowser(org.testng.ITestResult)[pri:0, instance:testscripts.AddUserPageTest@198d6542]" started-at="2024-09-10T20:13:23 IST" name="closeBrowser" finished-at="2024-09-10T20:13:25 IST" duration-ms="1757" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserCreation status=FAILURE method=AddUserPageTest.verifyUserCreation()[pri:0, instance:testscripts.AddUserPageTest@198d6542] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testscripts.AddUserPageTest -->
+    </test> <!-- UserTest -->
   </suite> <!-- Suite -->
 </testng-results>
